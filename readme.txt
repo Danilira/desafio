@@ -1,45 +1,37 @@
-GUI Form Example Descriptions
-================================================================================
+Documentação do projeto:
+	
+	O projeto possui quatro pacotes descritos a seguir:
+		conexao
+			Contém a classe responsável pela conexão ao banco de dados.
+		
+		gui
+			Contém as classes usadas para interação aplicação/usuário por meio da biblioteca Swing do Java
+		
+		model.bean
+			Contém as classes bean com os atributos dos objetos que serão persistidos no banco de dados
+		
+		model.dao
+			Contém as classes DAO(Data Acesss Object) que são responsavéis pelo envio dos dados para o banco.
+			
+			
+			
+Instruções para executar o projeto.
 
-This project contains three visual forms that were designed with the IDE's
-GUI Builder. You can open these forms in the IDE, and you can view accompanying 
-demos that show you how those forms can be created in the IDE.
+	Configuração do banco de dados:
+			Banco de utilizado: MySql
+				User = root
+				password = ""
+			
+				Base de dados: db_desafio(arquivo de importação encontra-se no projeto).
+			
+	A aplicação tem uma tela inicial com todos os botões para cadastro e consulta conforme pede os requisitos do desafio.
 
+	Na tela de cadastro de pessoas há campos de edição para o preenchimento do nome e sobrenome, as salas e espaços são exibidos por meio de um JComboBox com valores carregados previamente do banco de dados(necessário cadastrar as salas e espaços previamente).
 
-To open an example form in the GUI Builder:
+	Na tela de cadastro de salas e espaços há campos de edição de texto para nome e  lotação.
 
-1) In the IDE's Projects window, navigate to the examples package node within the 
-Source Packages directory.
+	O botão da Iniciar treinamento verifica se há pessoas, salas e espaços cadastrados. Também verifica se a diferença de pessoas em cada sala é superior a um.
 
-2) Double-click the node of the sample form you want to view.
+	Cadastre as pessoas, salas e espaços para então validar o treinamento usando o botão Iniciar treinamento.
 
-The IDE launches the GUI Builder and displays the chosen form.
-
-
-Contact Editor
---------------
-
-This complex form is similar to Windows dialogs typically used to display and 
-edit database information. The example illustrates the full range of GUI Builder 
-features, including alignment, anchoring, sizing, indentation, and runtime 
-auto-resizing behavior. To view a detailed tutorial including flash 
-demonstrations showing how to build this form, copy and paste the following link 
-into your web browser http://netbeans.org/kb/60/java/quickstart-gui.html.
-
-Antenna Preferences
--------------------
-
-This example illustrates a type of table-based form commonly used to display 
-related information in visually coherent groups. The GUI Builder's advanced 
-alignment features enable you to group and size non-adjacent components (such as 
-labels, text fields, and buttons) consistently without the need to merge cells
-manually. 
-
-Find
-----
-
-This simple form illustrates a straight-forward layout often used in various 
-applications requiring basic search functionality. The GUI Builder's alignment 
-and sizing features enable you to quickly construct such forms while ensuring 
-that they localize predictably. 
-
+	
