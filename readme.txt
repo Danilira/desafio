@@ -8,9 +8,11 @@ Documentação do projeto:
 			Contém as classes usadas para interação aplicação/usuário por meio da biblioteca Swing do Java
 		
 		model.bean
+		
 			Contém as classes bean com os atributos dos objetos que serão persistidos no banco de dados
 		
 		model.dao
+		
 			Contém as classes DAO(Data Acesss Object) que são responsavéis pelo envio dos dados para o banco.
 			
 			
