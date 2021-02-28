@@ -29,7 +29,9 @@ public class Desafio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sala");
+        setBackground(new java.awt.Color(153, 255, 153));
 
+        jPanel1.setBackground(new java.awt.Color(204, 153, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(" Pessoa "));
 
         btCadastrarPessoa.setText("Cadastrar pessoa");
@@ -67,6 +69,7 @@ public class Desafio extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(204, 153, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(" Espaço "));
 
         btCadastrarEspaco.setText("Cadastrar espaço");
@@ -104,6 +107,7 @@ public class Desafio extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(204, 153, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(" Sala "));
 
         btCadastrarSala.setText("Cadastrar sala");
@@ -141,7 +145,8 @@ public class Desafio extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        btIniciarTreinamento.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        btIniciarTreinamento.setBackground(new java.awt.Color(204, 255, 204));
+        btIniciarTreinamento.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         btIniciarTreinamento.setText("Iniciar treinamento");
         btIniciarTreinamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
