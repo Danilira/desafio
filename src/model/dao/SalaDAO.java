@@ -33,9 +33,9 @@ public class SalaDAO {
         ResultSet resultSet = null;
         List<Sala> salas = new ArrayList<>();
         try {
-            preparedStatement = connection.prepareStatement("SELECT nome, sobrenome, sala_etapa_um FROM pessoa WHERE sala_etapa_um = ? or sala_etapa_dois = ?");
-            preparedStatement.setString(1, nome);
-            preparedStatement.setString(2, nome);
+            preparedStatement = connection.prepareStatement("SELECT nome, sobrenome, sala_etapa_um FROM pessoa WHERE sala_etapa_um like ? or sala_etapa_dois like ?");
+            preparedStatement.setString(1, "%" + nome + "%");
+            preparedStatement.setString(2, "%" + nome + "%");
             resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
                 Sala salaRs = new Sala();

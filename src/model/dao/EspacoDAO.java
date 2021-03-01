@@ -36,9 +36,9 @@ public class EspacoDAO {
         ResultSet resultSet = null;
         List<Espaco> espacos = new ArrayList<>();
         try {
-            preparedStatement = connection.prepareStatement("SELECT nome, sobrenome, espaco_um FROM pessoa WHERE espaco_um = ? or espaco_dois = ?");
-            preparedStatement.setString(1, nome);
-            preparedStatement.setString(2, nome);
+            preparedStatement = connection.prepareStatement("SELECT nome, sobrenome, espaco_um FROM pessoa WHERE espaco_um like ? or espaco_dois like ?");
+            preparedStatement.setString(1, "%" + nome + "%");
+            preparedStatement.setString(2, "%" + nome + "%");
             resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
                 Espaco espacoRs = new Espaco();
